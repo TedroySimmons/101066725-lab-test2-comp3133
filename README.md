@@ -54,6 +54,20 @@ ng e2e
 
 Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
 
+---
+
+## 🔥 Live Demo  
+https://101066725-lab-test2-comp3133.vercel.app/
+![Screenshot 2](https://github.com/user-attachments/assets/050a61b2-8c1c-4655-bde5-911886cc1586)
+![Screenshot 1](https://github.com/user-attachments/assets/eb862ec4-33a9-4f4d-8444-44ad68f836fe)
+
+---
+
+## 👨‍💻 Author  
+**101066725 Tedroy Simmons**  
+
+---
+
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
