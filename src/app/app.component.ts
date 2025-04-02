@@ -1,12 +1,26 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, ViewChild } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
+import { MissionlistComponent } from './components/missionlist/missionlist.component';
+import { MissionfilterComponent } from './components/missionfilter/missionfilter.component';
+import { SpaceXService } from './services/space-x.service';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [CommonModule, HttpClientModule, MissionlistComponent, MissionfilterComponent],
+  providers: [SpaceXService],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = '101066725-lab-test2-comp3133';
+  @ViewChild(MissionlistComponent) missionList!: MissionlistComponent;
+
+  constructor(private spaceXService: SpaceXService) {}
+
+  filterByYear(year: string) {
+    this.spaceXService.getLaunchesByYear(year).subscribe(data => {
+      this.missionList.launches = data;
+    });
+  }
 }

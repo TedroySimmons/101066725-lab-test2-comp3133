@@ -1,0 +1,6 @@
+<mat-form-field>
+    <mat-label>Filter by Launch Year</mat-label>
+    <input matInput #yearInput type="text" placeholder="Enter year (e.g., 2020)">
+  </mat-form-field>
+  <button mat-raised-button (click)="filterMissions(yearInput.value)">Filter</button>
+  
